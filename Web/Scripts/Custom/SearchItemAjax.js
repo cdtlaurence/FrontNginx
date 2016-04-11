@@ -1,5 +1,7 @@
-﻿function SearchItem(keywords, postcode, distance, resultsOrder, resultsNumber) {
+﻿function SearchItem() {
     var xhttp;
+    var keywords = document.getElementById("keywords").value;
+    var resultsNumber = document.getElementById("resultsNumberSelect").value;
     if (window.XMLHttpRequest) {
         xhttp = new XMLHttpRequest();
     } else {
@@ -10,7 +12,14 @@
     xhttp.send();
     document.getElementsByClassName("search-result").innerHTML = "";
     document.getElementById("searchResults").innerHTML = xhttp.responseText;
-    var number = document.getElementById("Advert").count;
-    document.getElementById("searchDescription").innerHTML = "<strong class=\"text-danger\">" + number + "</strong> results were found for the search for <strong class=\"text-danger\">" + keywords + "</strong>";
+    var numberString = document.getElementsByTagName("img").length;
+    var number = parseInt(numberString);
+    number = number - 1;
+    console.log(number);
+    if (number === 0) {
+        document.getElementById("searchDescription").innerHTML = "<strong class=\"text-danger\">0</strong> results were found for the search for <strong class=\"text-danger\">" + keywords + "</strong>";
+    } else {
+        document.getElementById("searchDescription").innerHTML = "<strong class=\"text-danger\">" + number + "</strong> results were found for the search for <strong class=\"text-danger\">" + keywords + "</strong>";
+    }
     return false;
 }

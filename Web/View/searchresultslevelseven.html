@@ -9,10 +9,10 @@
     <div class="container">
         <div class="row">
             <h2>Search Freecycle</h2>
-            <form class="form form-inline form-multiline" action="../Controller/SearchResults.php" method="get" onsubmit="return SearchItem('dog', 'me19 6hw', '1', 'desc', '10')">
+            <form class="form form-inline form-multiline" action="../Controller/SearchResultsLevelSeven.php" method="get" onsubmit="return SearchItem()">
                 <div class="form-group">
                     <label class="filter-col">Rows per page:</label>
-                    <select name="resultsNumberSelect" class="form-control">
+                    <select name="resultsNumberSelect" id="resultsNumberSelect" class="form-control">
                         <option value="10">10</option>
                         <option value="15">15</option>
                         <option value="20">20</option>
@@ -46,7 +46,7 @@
                 </div>
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" class="search-query form-control" placeholder="Search" name="keywords" required="required" value="{{searchKeywords}}" />
+                        <input type="text" class="search-query form-control" placeholder="Search" name="keywords" id="keywords" required="required" value="{{searchKeywords}}" />
                         <span class="input-group-btn">
                             <button class="btn btn-success" type="submit">
                                 <span class="glyphicon glyphicon-search"></span>

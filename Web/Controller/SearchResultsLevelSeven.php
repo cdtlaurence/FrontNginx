@@ -20,6 +20,10 @@ function main()
     $keywords = $security->cleanString($_GET['keywords']);
     $postcode = $security->cleanString($_GET['postcodeInput']);
     $distance = $security->cleanString($_GET['distanceInput']);
+    if(!$distance)
+    {
+        $distance = 10;
+    }
     $resultsOrder = $security->cleanString($_GET['resultsOrderSelect']);
     $numberOfResults = $_GET['resultsNumberSelect'];
     $advertManagement = new AdvertManagement;

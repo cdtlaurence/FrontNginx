@@ -125,10 +125,9 @@ class AdvertManagement
             $urlApache = "http://stuweb.cms.gre.ac.uk/~lj231/WebServicesApache/Service/Services/GetAdvertsBySearch.php?term=$searchTerms&postcode=$postcode&distance=$distance&resultsorder=$resultsOrder&numberofresults=$numberOfResults";
             $apacheResult = new DOMDocument(); 
             $apacheResult->load($urlApache);
-            $urlIis = "http://stuiis.cms.gre.ac.uk/lj231/SOA/WebServicesIIS.Service/ItemSearch.asmx/GetAdvertsBySearch?searchTerm=$keywords&postcode=$postcode&distance=$distance&resultsorder=$resultsOrder&numberofresults=$numberOfResults";
+            $urlIis = "http://stuiis.cms.gre.ac.uk/lj231/SOA/WebServicesIIS.Service/ItemSearch.asmx/GetAdvertsAdvanced?searchTerm=$searchTerms&postcode=$postcode&distance=$distance&resultsorder=$resultsOrder&numberofresults=$numberOfResults";
             $iisResult = new DOMDocument(); 
             $iisResult->load($urlIis);
-
             $xmlRoot = $iisResult->documentElement; 
             foreach ( $apacheResult->documentElement->childNodes as $apacheNode ) 
             { 
