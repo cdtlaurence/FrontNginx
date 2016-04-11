@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Web</Name>
+    <ProjectGuid>48175b33-5c76-4f96-b510-80fb7fb3cd8b</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Web</RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>Web</AssemblyName>
+    <ProjectHome />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Business\AdvertManagement.php" />
+    <Compile Include="Business\UserManagement.php" />
+    <Compile Include="Controller\Activation.php" />
+    <Compile Include="Controller\AddAdvert.php" />
+    <Compile Include="Controller\EditAdvert.php" />
+    <Compile Include="Controller\Error.php" />
+    <Compile Include="Controller\Index.php" />
+    <Compile Include="Controller\LevelFour.php" />
+    <Compile Include="Controller\LevelSeven.php" />
+    <Compile Include="Controller\LevelSixClient.php" />
+    <Compile Include="Controller\LevelSix.php" />
+    <Compile Include="Controller\Logout.php" />
+    <Compile Include="Controller\Messages.php" />
+    <Compile Include="Controller\MyProfile.php" />
+    <Compile Include="Controller\MyAdverts.php" />
+    <Compile Include="Controller\RemoveAdvert.php" />
+    <Compile Include="Controller\RemoveConfirm.php" />
+    <Compile Include="Controller\SearchResults.php" />
+    <Compile Include="Controller\SearchResultsLevelEight" />
+    <Compile Include="Controller\SearchResultsLevelNine" />
+    <Compile Include="Controller\SearchResultsLevelSeven.php" />
+    <Compile Include="Controller\SearchResultsLevelSixClient.php" />
+    <Compile Include="Controller\SearchResultsLevelSix.php" />
+    <Compile Include="Controller\SearchResultsLevelFour.php" />
+    <Compile Include="Controller\ViewAdvert.php" />
+    <Compile Include="Controller\Login.php" />
+    <Compile Include="Model\Advert.php" />
+    <Compile Include="Model\Enum\AccountStatus.php" />
+    <Compile Include="Model\Enum\ErrorCode.php" />
+    <Compile Include="Model\Result.php" />
+    <Compile Include="Controller\Register.php" />
+    <Compile Include="Model\TemplateParameter.php" />
+    <Compile Include="Service\CheckAddress.php" />
+    <Compile Include="Service\CheckName.php" />
+    <Compile Include="Service\SearchItems.php" />
+    <Compile Include="Utilities\AddressApiManagement.php" />
+    <Compile Include="Utilities\Autoloader.php" />
+    <Compile Include="Utilities\Email.php" />
+    <Compile Include="Utilities\PageManagement.php" />
+    <Compile Include="Utilities\ReCaptchaApiManagement.php" />
+    <Compile Include="Utilities\Security.php" />
+    <Compile Include="Utilities\SessionManagement.php" />
+    <Compile Include="Utilities\Validation.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\Custom\site.css" />
+    <Content Include="Controller\Adverts.xslt" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Image\freecycle_logo.jpg" />
+    <Content Include="Image\no-image.gif" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\Custom\Image.js" />
+    <Content Include="Scripts\Custom\myprofile.js" />
+    <Content Include="Scripts\Custom\register.js" />
+    <Content Include="Scripts\Custom\SearchItemAjax.js" />
+    <Content Include="Scripts\Custom\searchresults.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\jquery-2.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.1.js" />
+    <Content Include="Scripts\jquery-2.2.1.min.js" />
+    <Content Include="Scripts\jquery-2.2.1.min.map" />
+    <Content Include="Scripts\jquery-2.2.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.2.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.map" />
+    <Content Include="View\activation.html" />
+    <Content Include="View\addadvert.html" />
+    <Content Include="View\editadvert.html" />
+    <Content Include="View\error.html" />
+    <Content Include="View\index.html" />
+    <Content Include="View\levelseven.html" />
+    <Content Include="View\levelsixclient.html" />
+    <Content Include="View\levelsix.html" />
+    <Content Include="View\levelfour.html" />
+    <Content Include="View\messages.html" />
+    <Content Include="View\myprofile.html" />
+    <Content Include="View\myadverts.html" />
+    <Content Include="View\register.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="View\removeconfirm.html" />
+    <Content Include="View\searchresultslevelseven.html" />
+    <Content Include="View\searchresultslevelsixclient.html" />
+    <Content Include="View\searchresultslevelsix.html" />
+    <Content Include="View\searchresults.html" />
+    <Content Include="View\topnavloggedout.html" />
+    <Content Include="View\topnavloggedin.html" />
+    <Content Include="View\viewadvert.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\Custom\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Image\" />
+    <Folder Include="Business\" />
+    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
+    <Folder Include="Model\Enum\" />
+    <Folder Include="Service\" />
+    <Folder Include="Scripts\Custom\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+</Project>

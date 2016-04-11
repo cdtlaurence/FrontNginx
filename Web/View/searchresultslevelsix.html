@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<head>
+    <title>Freecycle Search</title>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+</head>
+<body>
+    {{topNav}}
+    <div class="container">
+        <div class="row">
+            <h2>Search Freecycle</h2>
+            <form class="form form-inline form-multiline" action="../Controller/SearchResults.php" method="get">
+                <div class="form-group">
+                    <label class="filter-col">Rows per page:</label>
+                    <select name="resultsNumberSelect" class="form-control">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="filter-col">Order by date:</label>
+                    <select name="resultsOrderSelect" class="form-control">
+                        <option value="">Oldest</option>
+                        <option value="desc">Latest</option>
+                    </select>
+                </div>
+                <div id="postcodeDiv" class="form-group">
+                    <label for="postcodeInput" class="control-label">Postcode:</label>
+                    <input type="text" class="form-control" id="postcodeInput" name="postcodeInput" placeholder="Postcode" onchange="checkAddress(this.value)" />
+                    <span id="postcodeIcon" class="glyphicon form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+                    <label for="distanceInput" class="control-label">Max distance (Miles):</label>
+                    <input type="number" class="form-control" id="distanceInput" name="distanceInput" placeholder="Distance" />
+                </div>
+                <div>
+                    <br />
+                    <br />
+                </div>
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="search-query form-control" placeholder="Search" name="keywords" required="required" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="mb20">
+        <h1>Search Results</h1>
+    </div>
+    <div class="container">
+        {{searchResults}}
+    </div>
+    <script type="text/javascript" src="../Scripts/Custom/searchresults.js"></script>
+</body>
+</html>

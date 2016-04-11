@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<head>
+    <title>Freecycle My Adverts</title>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
+    <script src="../Scripts/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    {{topNav}}
+    <ul class="nav nav-tabs">
+        <li><a href="../Controller/MyProfile.php">Profile</a></li>
+        <li><a href="../Controller/Messages.php">Messages</a></li>
+        <li class="active dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="../Controller/MyAdverts.php">My Adverts<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="../Controller/AddAdvert.php">Add Advert</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div>
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="container">
+        {{searchResults}}
+        <div class="row">
+            <a href="../Controller/AddAdvert.php">Add new advert</a>
+        </div>
+    </div>
+</body>
+</html>
